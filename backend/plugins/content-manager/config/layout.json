@@ -1,0 +1,30 @@
+{
+  "files": {
+    "attributes": {
+      "title": {
+        "appearance": ""
+      },
+      "designer": {
+        "appearance": ""
+      },
+      "designer-email": {
+        "appearance": ""
+      },
+      "description": {
+        "appearance": ""
+      },
+      "tags": {
+        "appearance": ""
+      },
+      "downloads": {
+        "appearance": ""
+      },
+      "link": {
+        "appearance": ""
+      },
+      "category": {
+        "appearance": ""
+      }
+    }
+  }
+}

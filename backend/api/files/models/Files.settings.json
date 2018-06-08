@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "files",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "designer": {
+      "type": "string"
+    },
+    "designer-email": {
+      "type": "email"
+    },
+    "description": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "downloads": {
+      "type": "integer"
+    },
+    "link": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}
