@@ -1,0 +1,184 @@
+.error-message {
+  display: none;
+}
+
+.app {
+  padding: 5px;
+}
+/* ================== Navbar Related */
+
+nav {
+  overflow: hidden;
+  background: white;
+  position: fixed;
+  top: 0;
+  line-height: 1em;
+  height: 10em;
+  z-index: 1000;
+}
+
+.nav-links[data-alignment='vertical'] {
+  display: table;
+}
+
+.nav-links[data-alignment='vertical'] .nav-link {
+  display: table-cell;
+}
+
+.nav-links[data-alignment='horizontal'] {
+  display: block;
+}
+
+.nav-links[data-alignment='horizontal'] .nav-link {
+  display: list-item;
+}
+
+.nav-links {
+  list-style: none;
+  margin: auto;
+}
+
+.nav-link {
+  padding: 0.6em;
+  text-transform: uppercase;
+  margin: auto;
+  vertical-align: middle;
+  color: #333;
+}
+
+.nav-link a {
+  font-size: 1em;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.nav-link.active a {
+    opacity: 1;
+}
+
+.nav-link a:hover {
+  opacity: 1;
+}
+
+.brand {
+  display: block;
+}
+
+.brand .logo {
+  max-height: 80px;
+  line-height: 2em;
+  font-size: 1.5em;
+}
+
+.brand .name {
+  line-height: 3.3em;
+  font-size: 1.5em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#mobile-menu-container {
+  display: none;
+}
+
+#mobile-menu-container ul li {
+  font-size: 2em;
+  line-height: 1.6em;
+}
+
+.burger-menu {
+  float: right;
+  line-height: 6.3em;
+  font-size: 1.5em;
+  margin-right: 25px;
+}
+
+.tile {
+  width: 320px;
+  height: auto;
+}
+
+/* ================== Cards Related */
+
+.card {
+  height: 360px;
+  text-align: center;
+}
+
+.card-media {
+  width: 300px;
+}
+
+.card-media img {
+  width: 100%;
+}
+
+.card-content {
+  line-height: 1.8em;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+/* ================== Labels Related */
+
+.label:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* ================== File Related */
+
+.file-thumbnail {
+  width: 100%;
+}
+
+.file-details {
+    padding-left: 15px;
+}
+
+.file-title {
+  font-size: 1.8rem;
+  margin: 1rem 0px 0.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.file-by {
+  line-height: 2em;
+  opacity: 0.6;
+  font-size: 0.9em;
+}
+
+.file-by a:hover {
+  text-decoration: underline;
+}
+
+.file-description {
+  line-height: 1.5em;
+  font-size: 1.4em;
+  word-break: break-word;
+  text-decoration: none;
+  outline: none;
+}
+
+.tags {
+  display: table;
+}
+
+.tag-item {
+  display: inline-block;
+  margin: 3px;
+}
+
+.tag-item a {
+  text-decoration: underline;
+}

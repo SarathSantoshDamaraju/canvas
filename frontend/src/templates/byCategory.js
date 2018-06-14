@@ -1,16 +1,14 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Card from '../components/card'
+import Card from '../components/card';
+import Label from '../components/label';
 
 const ArticleTemplate = ({ data }) => (
   <div className='row'>
-    <div className='col-md-8'>
-    {data.allStrapiFiles.edges.map(document => (
+  {data.allStrapiFiles.edges.map(document => (
       <Card data={document} key={document.node.id}/>
-    ))}
-    </div>
-    <div className='col-md-4'></div>
-  </div>
+  ))}
+</div>
 );
 
 export default ArticleTemplate;
@@ -21,11 +19,11 @@ query getByCategory($category: String!){
     edges{
       node{
         id
-          title
-          category
-          thumbnail {
-            url
-          }
+        title
+        category
+        thumbnail {
+          url
+        }
       }
     }
   }

@@ -1,0 +1,73 @@
+@media screen and (max-width: 1023px){
+  #desktop-menu-container > div:nth-child(2n + 1) {
+    display: none;
+  }
+
+  .brand .logo {
+    left: 25px;
+    right: auto;
+  }
+
+  .brand .name {
+    float: left;
+    line-height: 3.3em;
+    font-size: 1.5em;
+  }
+
+  .for-mobile {
+    display: inline;
+  }
+
+  .card {
+    height: 600px;
+  }
+  
+  .card-media {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .card {
+    height: 440px;
+  }
+
+  .card-media {
+    width: 400px;
+  }
+
+  .brand .logo{
+    max-height: 50px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .card {
+    height: 360px;
+  }
+
+  .card-media {
+    width: 320px;
+  }
+}
+
+
+@media screen and (max-width: 360px){
+  .card {
+    height: 320px;
+  }
+
+  .card-media {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 300px){
+  #app, header {
+    display: none
+  }
+  .error-message{
+    display: inline
+  }
+}
+

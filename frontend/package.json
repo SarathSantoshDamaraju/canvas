@@ -7,6 +7,7 @@
     "bootstrap": "^4.1.1",
     "foundation-sites": "^6.4.4-rc1",
     "gatsby": "^1.9.247",
+    "gatsby-image": "^1.0.52",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-source-filesystem": "^1.5.38",

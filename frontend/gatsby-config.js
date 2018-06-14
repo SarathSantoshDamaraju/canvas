@@ -1,7 +1,10 @@
+const path = require(`path`);
+
 module.exports = {  
   siteMetadata: {
     title: `Sketch Repo`,
   },
+  pathPrefix: `../`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

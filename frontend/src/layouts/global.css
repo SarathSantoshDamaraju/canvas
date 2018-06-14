@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://use.fontawesome.com/releases/v5.0.13/css/all.css');
+
+/* ================== Tags Related */
+
+body {
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+    border-radius: 4px;
+}
+
+/* ================== Displays Related */
+
+.block {
+  display: block;
+}
+
+.absolute {
+  display: absolute;
+}
+
+.fixed {
+  display: fixed;
+}
+
+/* ================== Lengths Related */
+
+.full-height {
+  height: 100% !important;
+}
+
+.full-width {
+  width: 100% !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/* ================== Positions Related */
+
+.center-center {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  bottom: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ================== Text Colors */
+
+.color-red {
+  color: #c62828;
+}
+
+/* ================== Margins and Paddings */
+
+.ma{
+    margin: auto;
+}
+
+.mtb-1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.mt-11 {
+  margin-top: 11rem;
+}
+
+/* ================== Utils */
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  margin: auto;
+  background: #fff;
+  overflow: scroll;
+  z-index: 9999;
+}
+
+.for-mobile {
+  display: none;
+}
+
+.button {
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(34, 34, 34);
+    -o-border-image: none;
+    border-image: none;
+    -o-border-image: initial;
+    border-image: initial;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+}
+
+.button-black {
+    background: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+}

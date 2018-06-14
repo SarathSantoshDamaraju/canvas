@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "files",
   "info": {
     "name": "files",
     "description": ""
@@ -36,6 +36,9 @@
       "type": "string"
     },
     "category": {
+      "type": "string"
+    },
+    "designer_portfolio": {
       "type": "string"
     }
   }

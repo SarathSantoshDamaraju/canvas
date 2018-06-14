@@ -4,11 +4,9 @@ import config from '../../config';
 import FileDetails from '../components/file-details';
 
 const ArticleTemplate = ({ data }) => (
-  <div className='row'>
-    <div className='col-md-8'>
+  <div>
       <FileDetails data={data.strapiFiles} />
-    </div>
-    <div className='col-md-4'></div>
+    <div></div>
   </div>
 );
 
@@ -23,6 +21,7 @@ export const query = graphql`
       tags
       link
       designer_email
+      designer_portfolio
       designer
       thumbnail {
         url
