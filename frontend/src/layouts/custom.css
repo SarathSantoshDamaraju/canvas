@@ -5,6 +5,16 @@
 .app {
   padding: 5px;
 }
+/* */
+
+.no-page h1 {
+  font-size: 3em;
+  line-height: 2em;
+}
+
+.no-page p {
+  font-size: 1.2em;
+}
 /* ================== Navbar Related */
 
 nav {
@@ -181,4 +191,21 @@ nav {
 
 .tag-item a {
   text-decoration: underline;
+}
+
+/* ================== About Page Related */
+.about .title {
+  font-size: 2em;
+    line-height: 2em;
+}
+
+.about .description {
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
+
+.about .attribution {
+  text-align: center;
+    font-size: 1em;
+    opacity: 0.8;
 }

@@ -1,24 +1,24 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "designsRepo",
+  "description": "A simple blog Template for Designers to showcase their designs. It is a minimal implementation of SketchRepo built with Gatsby and Strapi.",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Krishna Sarath <sarathdamaraju@hotmail.com>",
   "dependencies": {
     "axios": "^0.18.0",
-    "bootstrap": "^4.1.1",
-    "foundation-sites": "^6.4.4-rc1",
     "gatsby": "^1.9.247",
     "gatsby-image": "^1.0.52",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-source-filesystem": "^1.5.38",
     "gatsby-source-strapi": "0.0.3",
-    "jquery": "^3.3.1",
-    "react-helmet": "^5.2.0",
-    "webfontloader": "^1.6.28"
+    "react-helmet": "^5.2.0"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "strapi",
+    "blog",
+    "sketchRepo Clone",
+    "design repo"
   ],
   "license": "MIT",
   "scripts": {

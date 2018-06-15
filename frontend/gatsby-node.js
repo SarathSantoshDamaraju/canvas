@@ -31,7 +31,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     result.data.allStrapiFiles.edges.forEach(({ node }) => {
       // Creating Page for Individual File
       createPage({
-        path: `/${node.title}`,
+        path: `/file/${node.title}`,
         component: path.resolve(`src/templates/byFile.js`),
         context: {
           id: node.id
@@ -45,7 +45,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           category: node.category
         }
       });
-
+      if(node.tags){
       node.tags.split(',').forEach((tag) => {
         var tagName = tag.length !== 0 ? tag.trim() : false;
         if (tagName) {
@@ -58,6 +58,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           });
         }
       });
+    }
     });
   });
 
