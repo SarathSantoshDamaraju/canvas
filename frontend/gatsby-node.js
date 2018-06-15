@@ -31,7 +31,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     result.data.allStrapiFiles.edges.forEach(({ node }) => {
       // Creating Page for Individual File
       createPage({
-        path: `/file/${node.title}`,
+        path: `/${node.title}`,
         component: path.resolve(`src/templates/byFile.js`),
         context: {
           id: node.id
