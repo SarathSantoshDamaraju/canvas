@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
+import Footer from '../components/footer'
 import Link from 'gatsby-link';
 import './reset.css'
 import './global.css'
@@ -26,15 +27,7 @@ const Layout = ({ children, data }) => (
     <div className='error-message center-center'>
       <p>Screen size not supported, please try from another device</p>
     </div>
-    <footer className='container'>
-      <div className='row'>
-      <ul className='nav-links full-height' data-alignment='vertical'>
-          <li className='nav-link active'><Link to=''>About</Link></li>
-          <li className='nav-link'><Link to=''>Contact</Link></li>
-          <li className='nav-link'><Link to=''>All</Link></li>
-        </ul>
-      </div>
-    </footer>
+    <Footer/>
   </div>
 )
 

@@ -5,7 +5,6 @@ import Label from '../label';
 import image from '../../images/light.jpg';
 
 const Card = ({data}) => {
-  console.log(data);
   return (
     <div className='col-md-4 col-xs-6 col-xs-12 card'>
       <div className='card-media ma'>

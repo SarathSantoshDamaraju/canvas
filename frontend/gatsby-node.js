@@ -22,6 +22,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             id
             title
             category
+            tags
           }
         }
       }
@@ -42,6 +43,19 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         component: path.resolve(`src/templates/byCategory.js`),
         context: {
           category: node.category
+        }
+      });
+
+      node.tags.split(',').forEach((tag) => {
+        var tagName = tag.length !== 0 ? tag.trim() : false;
+        if (tagName) {
+          createPage({
+            path: `/tag/${tagName}`,
+            component: path.resolve(`src/templates/byTag.js`),
+            context: {
+              tag: `/${tagName}/`
+            }
+          });
         }
       });
     });

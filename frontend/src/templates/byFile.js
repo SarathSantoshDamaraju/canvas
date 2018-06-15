@@ -15,9 +15,11 @@ export default ArticleTemplate;
 export const query = graphql`  
   query FileTemplate($id: String!) {
     strapiFiles(id: {eq: $id}) {
+      id
       title
       description
       category
+      downloads
       tags
       link
       designer_email
