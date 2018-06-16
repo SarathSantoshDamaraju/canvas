@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import logo from '../../images/logo.jpg';
+import config from '../../../config';
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -23,7 +24,7 @@ const Header = ({ siteTitle }) => (
       </div>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12 for-desktop'>
       <ul className='nav-links full-height' data-alignment='vertical'>
-          <li className='nav-link'><Link to=''>Submit</Link></li>
+          <li className='nav-link'><Link to={config.fileSubmit}>Submit</Link></li>
           <li className='nav-link'><Link to='/about'>About</Link></li>
         </ul>
       </div>
@@ -34,7 +35,7 @@ const Header = ({ siteTitle }) => (
           <li className='nav-link active'><a href='/new' onClick={closeMobileMenu}>New</a></li>
           <li className='nav-link'><a href='' onClick={closeMobileMenu}>Popular</a></li>
           <li className='nav-link'><a href='/' onClick={closeMobileMenu}>All</a></li>
-          <li className='nav-link'><a href='/search' onClick={closeMobileMenu}>Submit</a></li>
+          <li className='nav-link'><a href={config.fileSubmit} onClick={closeMobileMenu}>Submit</a></li>
           <li className='nav-link'><a href='/about' onClick={closeMobileMenu}>About</a></li>
           <li className='nav-link'><a href="#" className='color-red' onClick={closeMobileMenu}>Close</a></li>
         </ul>
