@@ -10,16 +10,20 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "designer": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "designer-email": {
       "type": "email"
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "thumbnail": {
       "model": "file",
@@ -27,16 +31,19 @@
       "plugin": "upload"
     },
     "tags": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "downloads": {
       "type": "integer"
     },
     "link": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "category": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "designer_portfolio": {
       "type": "string"
