@@ -1,0 +1,19 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "externallinks",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

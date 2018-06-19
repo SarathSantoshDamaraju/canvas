@@ -1,0 +1,20 @@
+{
+  "connection": "default",
+  "collectionName": "categories",
+  "info": {
+    "name": "categories",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "category-label": {
+      "type": "string"
+    },
+    "files": {
+      "collection": "files",
+      "via": "category"
+    }
+  }
+}

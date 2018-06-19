@@ -27,6 +27,52 @@
       },
       "user_portfolio": {
         "appearance": ""
+      },
+      "designer_email": {
+        "appearance": ""
+      },
+      "designer_portfolio": {
+        "appearance": ""
+      }
+    }
+  },
+  "categories": {
+    "attributes": {
+      "Name": {
+        "appearance": ""
+      },
+      "category-label": {
+        "appearance": ""
+      }
+    }
+  },
+  "tags": {
+    "attributes": {
+      "tag-label": {
+        "appearance": ""
+      }
+    }
+  },
+  "featured": {
+    "attributes": {
+      "title": {
+        "appearance": ""
+      },
+      "category": {
+        "appearance": ""
+      },
+      "post_type": {
+        "appearance": ""
+      }
+    }
+  },
+  "externalLinks": {
+    "attributes": {
+      "name": {
+        "appearance": ""
+      },
+      "link": {
+        "appearance": ""
       }
     }
   }

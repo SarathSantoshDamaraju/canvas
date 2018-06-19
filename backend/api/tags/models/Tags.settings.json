@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "tags",
+  "info": {
+    "name": "tags",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "tag-label": {
+      "type": "string"
+    },
+    "files": {
+      "collection": "files",
+      "via": "tags",
+      "dominant": true
+    }
+  }
+}

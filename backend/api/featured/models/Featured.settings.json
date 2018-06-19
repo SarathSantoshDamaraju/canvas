@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "featured",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string"
+    },
+    "post_type": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}

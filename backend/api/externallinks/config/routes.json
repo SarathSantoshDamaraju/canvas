@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/externallinks",
+      "handler": "Externallinks.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/externallinks/:_id",
+      "handler": "Externallinks.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/externallinks/count",
+      "handler": "Externallinks.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/externallinks",
+      "handler": "Externallinks.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/externallinks/:_id",
+      "handler": "Externallinks.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/externallinks/:_id",
+      "handler": "Externallinks.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
