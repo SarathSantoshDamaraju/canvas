@@ -15,12 +15,14 @@ export default ArticleTemplate;
 
 export const query = graphql`  
 query getByCategory($category: String!){
-  allStrapiFiles(filter: {category: {eq: $category}}){
+  allStrapiFiles(filter: {category: {name: {eq: $category}}}){
     edges{
       node{
         id
         title
-        category
+        category{
+          name
+        }
         thumbnail {
           url
         }

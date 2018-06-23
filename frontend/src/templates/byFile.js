@@ -3,12 +3,14 @@ import Link from 'gatsby-link';
 import config from '../../config';
 import FileDetails from '../components/file-details';
 
-const ArticleTemplate = ({ data }) => (
+const ArticleTemplate = ({ data }) => {
+  console.log(data);
+  return(
   <div>
       <FileDetails data={data.strapiFiles} />
     <div></div>
   </div>
-);
+)};
 
 export default ArticleTemplate;
 
@@ -18,7 +20,9 @@ export const query = graphql`
       id
       title
       description
-      category
+      category{
+        name
+      }
       downloads
       tags
       link

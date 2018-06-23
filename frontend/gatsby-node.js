@@ -22,6 +22,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             id
             title
             category
+            {
+              name
+            }
             tags
           }
         }
@@ -31,7 +34,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     result.data.allStrapiFiles.edges.forEach(({ node }) => {
       // Creating Page for Individual File
       createPage({
-        path: `/${node.title}`,
+        path: `/${node.id}`,
         component: path.resolve(`src/templates/byFile.js`),
         context: {
           id: node.id
@@ -39,10 +42,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       });
       // Creating Page for Individual Category
       createPage({
-        path: `/category/${node.category}`,
+        path: `/category/${node.category.name}`,
         component: path.resolve(`src/templates/byCategory.js`),
         context: {
-          category: node.category
+          category: node.category.name
         }
       });
       if(node.tags){

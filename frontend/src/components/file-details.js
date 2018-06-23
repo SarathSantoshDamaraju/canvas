@@ -6,6 +6,7 @@ import Label from './label';
 import Tags from './tags';
 
 const FileDetails = ({data}) => {
+  console.log(data);
   return (
     <div className='row file'>
       <div className='col-md-6'>
@@ -17,7 +18,7 @@ const FileDetails = ({data}) => {
       </div>
       <div className='col-md-6'>
         <div className='file-details'>
-          <Label data={{category: data.category, isLink: true, linkUrl: 'category/' + data.category}} />
+          <Label data={{category: data.category.name, isLink: true, linkUrl: 'category/' + data.category.name}} />
           <h2 className='file-title'>{data.title}</h2>
           <p className='file-by mtb-1'>
             Designed by <a href={data.designer_portfolio} target='blank'>{data.designer.toLowerCase()}</a>
@@ -31,18 +32,4 @@ const FileDetails = ({data}) => {
   );
 };
 
-function updateDownloads(id, totalDownloads) {
-  console.log(id, totalDownloads);
-    axios.put(config.api+'/files/'+id, {
-      data: {
-        downloads: totalDownloads+1
-      },
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-}
 export default FileDetails;

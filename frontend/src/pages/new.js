@@ -22,7 +22,9 @@ export const pageQuery = graphql`
         node {
           id
           title
-          category
+          category{
+            name
+          }
           thumbnail {
             url
           }

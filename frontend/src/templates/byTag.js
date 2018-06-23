@@ -20,7 +20,9 @@ query getByTag($tag: String!){
       node{
         id
         title
-        category
+        category {
+          name
+        }
         thumbnail {
           url
         }
