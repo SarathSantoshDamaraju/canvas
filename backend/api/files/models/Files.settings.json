@@ -47,7 +47,7 @@
     },
     "category": {
       "model": "categories",
-      "via": "files"
+      "via": "category"
     }
   }
 }

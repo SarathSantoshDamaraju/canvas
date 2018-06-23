@@ -9,12 +9,12 @@
     "timestamps": true
   },
   "attributes": {
-    "category-label": {
-      "type": "string"
-    },
-    "files": {
+    "category": {
       "collection": "files",
       "via": "category"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }

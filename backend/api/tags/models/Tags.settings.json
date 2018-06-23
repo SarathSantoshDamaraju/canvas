@@ -9,13 +9,15 @@
     "timestamps": true
   },
   "attributes": {
-    "tag-label": {
-      "type": "string"
-    },
     "files": {
       "collection": "files",
       "via": "tags",
       "dominant": true
+    },
+    "name": {
+      "unique": true,
+      "type": "string",
+      "required": true
     }
   }
 }
