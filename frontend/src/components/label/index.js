@@ -29,7 +29,7 @@ const Label = ({data}) => {
       iconClass += 'bgcolor-mobile';
       labelClass += 'color-mobile';
       break;
-    case 'ui-kits':
+    case 'uikits':
       iconClass += 'bgcolor-ui-kits';
       labelClass += 'color-ui-kits';
       break;

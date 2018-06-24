@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Featured` model.
+ * Lifecycle callbacks for the `Featuredvideos` model.
  */
 
 module.exports = {

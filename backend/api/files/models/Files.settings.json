@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "files",
   "info": {
     "name": "files",
     "description": ""
@@ -11,7 +11,8 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "thumbnail": {
       "model": "file",
@@ -23,8 +24,8 @@
       "required": true
     },
     "designer_email": {
-      "unique": true,
-      "type": "string"
+      "type": "string",
+      "default": "null"
     },
     "downloads": {
       "type": "integer",
@@ -34,20 +35,24 @@
       "type": "text",
       "required": true
     },
-    "tags": {
-      "collection": "tags",
-      "via": "files"
-    },
     "link": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "designer_portfolio": {
+      "type": "string",
+      "default": "null"
+    },
+    "tags": {
       "type": "string"
+    },
+    "featured": {
+      "type": "boolean"
     },
     "category": {
       "model": "categories",
-      "via": "category"
+      "via": "file"
     }
   }
 }

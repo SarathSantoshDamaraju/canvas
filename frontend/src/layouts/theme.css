@@ -1,3 +1,7 @@
+.color-primary {
+  color: #fb0d0d;
+}
+
 .color-mockups {
   color: #e1b88f;
 }
@@ -22,7 +26,7 @@
   color: #5494bc;
 }
 
-.color-ui-kits {
+.color-uikits {
   color: #747aad;
 }
 
@@ -54,7 +58,7 @@
   background-color: #5494bc;
 }
 
-.bgcolor-ui-kits {
+.bgcolor-uikits {
   background-color: #747aad;
 }
 

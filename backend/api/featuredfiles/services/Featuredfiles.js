@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Featured.js service
+ * Featuredfiles.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -12,21 +12,21 @@ const _ = require('lodash');
 module.exports = {
 
   /**
-   * Promise to fetch all featureds.
+   * Promise to fetch all featuredfiles.
    *
    * @return {Promise}
    */
 
   fetchAll: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('featured', params);
+    const filters = strapi.utils.models.convertParams('featuredfiles', params);
     // Select field to populate.
-    const populate = Featured.associations
+    const populate = Featuredfiles.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Featured
+    return Featuredfiles
       .find()
       .where(filters.where)
       .sort(filters.sort)
@@ -36,90 +36,90 @@ module.exports = {
   },
 
   /**
-   * Promise to fetch a/an featured.
+   * Promise to fetch a/an featuredfiles.
    *
    * @return {Promise}
    */
 
   fetch: (params) => {
     // Select field to populate.
-    const populate = Featured.associations
+    const populate = Featuredfiles.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Featured
-      .findOne(_.pick(params, _.keys(Featured.schema.paths)))
+    return Featuredfiles
+      .findOne(_.pick(params, _.keys(Featuredfiles.schema.paths)))
       .populate(populate);
   },
 
   /**
-   * Promise to count featureds.
+   * Promise to count featuredfiles.
    *
    * @return {Promise}
    */
 
   count: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('featured', params);
+    const filters = strapi.utils.models.convertParams('featuredfiles', params);
 
-    return Featured
+    return Featuredfiles
       .count()
       .where(filters.where);
   },
 
   /**
-   * Promise to add a/an featured.
+   * Promise to add a/an featuredfiles.
    *
    * @return {Promise}
    */
 
   add: async (values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Featured.associations.map(ast => ast.alias));
-    const data = _.omit(values, Featured.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Featuredfiles.associations.map(ast => ast.alias));
+    const data = _.omit(values, Featuredfiles.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = await Featured.create(data);
+    const entry = await Featuredfiles.create(data);
 
     // Create relational data and return the entry.
-    return Featured.updateRelations({ id: entry.id, values: relations });
+    return Featuredfiles.updateRelations({ id: entry.id, values: relations });
   },
 
   /**
-   * Promise to edit a/an featured.
+   * Promise to edit a/an featuredfiles.
    *
    * @return {Promise}
    */
 
   edit: async (params, values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Featured.associations.map(a => a.alias));
-    const data = _.omit(values, Featured.associations.map(a => a.alias));
+    const relations = _.pick(values, Featuredfiles.associations.map(a => a.alias));
+    const data = _.omit(values, Featuredfiles.associations.map(a => a.alias));
 
     // Update entry with no-relational data.
-    const entry = await Featured.update(params, data, { multi: true });
+    const entry = await Featuredfiles.update(params, data, { multi: true });
 
     // Update relational data and return the entry.
-    return Featured.updateRelations(Object.assign(params, { values: relations }));
+    return Featuredfiles.updateRelations(Object.assign(params, { values: relations }));
   },
 
   /**
-   * Promise to remove a/an featured.
+   * Promise to remove a/an featuredfiles.
    *
    * @return {Promise}
    */
 
   remove: async params => {
     // Select field to populate.
-    const populate = Featured.associations
+    const populate = Featuredfiles.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
     // Note: To get the full response of Mongo, use the `remove()` method
     // or add spent the parameter `{ passRawResult: true }` as second argument.
-    const data = await Featured
+    const data = await Featuredfiles
       .findOneAndRemove(params, {})
       .populate(populate);
 
@@ -128,7 +128,7 @@ module.exports = {
     }
 
     await Promise.all(
-      Featured.associations.map(async association => {
+      Featuredfiles.associations.map(async association => {
         const search = _.endsWith(association.nature, 'One') || association.nature === 'oneToMany' ? { [association.via]: data._id } : { [association.via]: { $in: [data._id] } };
         const update = _.endsWith(association.nature, 'One') || association.nature === 'oneToMany' ? { [association.via]: null } : { $pull: { [association.via]: data._id } };
 

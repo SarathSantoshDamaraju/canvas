@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "externallinks",
   "info": {
     "name": "externallinks",
     "description": ""
@@ -10,7 +10,10 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "default": "either 'video' or 'blog', update this to change feature links in home page. Make sure to have only one of each type, if not last item in the list for each 'videos' and 'articles' will be updated, and all unknown articles will lead to /all page",
+      "required": true,
+      "unique": true
     },
     "link": {
       "type": "string"

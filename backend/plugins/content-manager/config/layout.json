@@ -33,6 +33,9 @@
       },
       "designer_portfolio": {
         "appearance": ""
+      },
+      "featured": {
+        "appearance": ""
       }
     }
   },
@@ -78,6 +81,36 @@
         "appearance": ""
       },
       "link": {
+        "appearance": ""
+      }
+    }
+  },
+  "featuredVideos": {
+    "attributes": {
+      "title": {
+        "appearance": ""
+      },
+      "link": {
+        "appearance": ""
+      }
+    }
+  },
+  "featuredBlogs": {
+    "attributes": {
+      "title": {
+        "appearance": ""
+      },
+      "link": {
+        "appearance": ""
+      }
+    }
+  },
+  "siteConfig": {
+    "attributes": {
+      "meta": {
+        "appearance": ""
+      },
+      "description": {
         "appearance": ""
       }
     }

@@ -59,6 +59,14 @@ img {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 /* ================== Text Colors */
 
 .color-red {
@@ -75,12 +83,26 @@ img {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+.mtb-2 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 .mt-11 {
   margin-top: 11rem;
 }
 
 .mt-90 {
   margin-top: 90px;
+}
+
+.mtb-90 {
+  margin: 90px auto;
+}
+
+.plr-20 {
+  padding: 0 20px;
 }
 /* ================== Utils */
 
@@ -114,6 +136,12 @@ img {
     cursor: pointer;
     outline: none;
     display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+    min-width: 100px;
+    max-height: 35px;
+    border-radius: 0px;
+    box-shadow: none;
+    text-align: center;
 }
 
 .button-black {

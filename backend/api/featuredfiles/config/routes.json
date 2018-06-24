@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/externallinks",
-      "handler": "Externallinks.find",
+      "path": "/featuredfiles",
+      "handler": "Featuredfiles.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/externallinks/:_id",
-      "handler": "Externallinks.findOne",
+      "path": "/featuredfiles/:_id",
+      "handler": "Featuredfiles.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/externallinks/count",
-      "handler": "Externallinks.count",
+      "path": "/featuredfiles/count",
+      "handler": "Featuredfiles.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/externallinks",
-      "handler": "Externallinks.create",
+      "path": "/featuredfiles",
+      "handler": "Featuredfiles.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/externallinks/:_id",
-      "handler": "Externallinks.update",
+      "path": "/featuredfiles/:_id",
+      "handler": "Featuredfiles.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/externallinks/:_id",
-      "handler": "Externallinks.destroy",
+      "path": "/featuredfiles/:_id",
+      "handler": "Featuredfiles.destroy",
       "config": {
         "policies": []
       }

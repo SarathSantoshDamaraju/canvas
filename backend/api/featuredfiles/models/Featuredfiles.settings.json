@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "featured",
   "info": {
-    "name": "featured",
+    "name": "featuredFiles",
     "description": ""
   },
   "options": {
@@ -14,10 +14,7 @@
       "type": "string",
       "required": true
     },
-    "category": {
-      "type": "string"
-    },
-    "post_type": {
+    "link": {
       "type": "string",
       "required": true
     },
@@ -25,6 +22,10 @@
       "model": "file",
       "via": "related",
       "plugin": "upload"
+    },
+    "category": {
+      "model": "categories",
+      "via": "featuredWith"
     }
   }
 }

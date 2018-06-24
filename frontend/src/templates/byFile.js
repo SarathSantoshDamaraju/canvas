@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import config from '../../config';
-import FileDetails from '../components/file-details';
+import FileDetails from '../components/file';
 
 const ArticleTemplate = ({ data }) => {
   console.log(data);

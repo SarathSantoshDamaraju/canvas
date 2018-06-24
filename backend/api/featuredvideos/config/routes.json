@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/featured",
-      "handler": "Featured.find",
+      "path": "/featuredvideos",
+      "handler": "Featuredvideos.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/featured/:_id",
-      "handler": "Featured.findOne",
+      "path": "/featuredvideos/:_id",
+      "handler": "Featuredvideos.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/featured/count",
-      "handler": "Featured.count",
+      "path": "/featuredvideos/count",
+      "handler": "Featuredvideos.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/featured",
-      "handler": "Featured.create",
+      "path": "/featuredvideos",
+      "handler": "Featuredvideos.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/featured/:_id",
-      "handler": "Featured.update",
+      "path": "/featuredvideos/:_id",
+      "handler": "Featuredvideos.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/featured/:_id",
-      "handler": "Featured.destroy",
+      "path": "/featuredvideos/:_id",
+      "handler": "Featuredvideos.destroy",
       "config": {
         "policies": []
       }

@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Tags` model.
+ * Lifecycle callbacks for the `Featuredblogs` model.
  */
 
 module.exports = {

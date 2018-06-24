@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Tags.js service
+ * Featuredvideos.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -12,21 +12,21 @@ const _ = require('lodash');
 module.exports = {
 
   /**
-   * Promise to fetch all tags.
+   * Promise to fetch all featuredvideos.
    *
    * @return {Promise}
    */
 
   fetchAll: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('tags', params);
+    const filters = strapi.utils.models.convertParams('featuredvideos', params);
     // Select field to populate.
-    const populate = Tags.associations
+    const populate = Featuredvideos.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Tags
+    return Featuredvideos
       .find()
       .where(filters.where)
       .sort(filters.sort)
@@ -36,90 +36,90 @@ module.exports = {
   },
 
   /**
-   * Promise to fetch a/an tags.
+   * Promise to fetch a/an featuredvideos.
    *
    * @return {Promise}
    */
 
   fetch: (params) => {
     // Select field to populate.
-    const populate = Tags.associations
+    const populate = Featuredvideos.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Tags
-      .findOne(_.pick(params, _.keys(Tags.schema.paths)))
+    return Featuredvideos
+      .findOne(_.pick(params, _.keys(Featuredvideos.schema.paths)))
       .populate(populate);
   },
 
   /**
-   * Promise to count tags.
+   * Promise to count featuredvideos.
    *
    * @return {Promise}
    */
 
   count: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('tags', params);
+    const filters = strapi.utils.models.convertParams('featuredvideos', params);
 
-    return Tags
+    return Featuredvideos
       .count()
       .where(filters.where);
   },
 
   /**
-   * Promise to add a/an tags.
+   * Promise to add a/an featuredvideos.
    *
    * @return {Promise}
    */
 
   add: async (values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Tags.associations.map(ast => ast.alias));
-    const data = _.omit(values, Tags.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Featuredvideos.associations.map(ast => ast.alias));
+    const data = _.omit(values, Featuredvideos.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = await Tags.create(data);
+    const entry = await Featuredvideos.create(data);
 
     // Create relational data and return the entry.
-    return Tags.updateRelations({ id: entry.id, values: relations });
+    return Featuredvideos.updateRelations({ id: entry.id, values: relations });
   },
 
   /**
-   * Promise to edit a/an tags.
+   * Promise to edit a/an featuredvideos.
    *
    * @return {Promise}
    */
 
   edit: async (params, values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Tags.associations.map(a => a.alias));
-    const data = _.omit(values, Tags.associations.map(a => a.alias));
+    const relations = _.pick(values, Featuredvideos.associations.map(a => a.alias));
+    const data = _.omit(values, Featuredvideos.associations.map(a => a.alias));
 
     // Update entry with no-relational data.
-    const entry = await Tags.update(params, data, { multi: true });
+    const entry = await Featuredvideos.update(params, data, { multi: true });
 
     // Update relational data and return the entry.
-    return Tags.updateRelations(Object.assign(params, { values: relations }));
+    return Featuredvideos.updateRelations(Object.assign(params, { values: relations }));
   },
 
   /**
-   * Promise to remove a/an tags.
+   * Promise to remove a/an featuredvideos.
    *
    * @return {Promise}
    */
 
   remove: async params => {
     // Select field to populate.
-    const populate = Tags.associations
+    const populate = Featuredvideos.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
     // Note: To get the full response of Mongo, use the `remove()` method
     // or add spent the parameter `{ passRawResult: true }` as second argument.
-    const data = await Tags
+    const data = await Featuredvideos
       .findOneAndRemove(params, {})
       .populate(populate);
 
@@ -128,7 +128,7 @@ module.exports = {
     }
 
     await Promise.all(
-      Tags.associations.map(async association => {
+      Featuredvideos.associations.map(async association => {
         const search = _.endsWith(association.nature, 'One') || association.nature === 'oneToMany' ? { [association.via]: data._id } : { [association.via]: { $in: [data._id] } };
         const update = _.endsWith(association.nature, 'One') || association.nature === 'oneToMany' ? { [association.via]: null } : { $pull: { [association.via]: data._id } };
 

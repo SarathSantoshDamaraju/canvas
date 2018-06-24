@@ -13,7 +13,11 @@ module.exports = {
       options: {
         apiURL: config.api,
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
-          `files`
+          `files`,
+          `featuredBlogs`,
+          `featuredVideos`,
+          `featuredFiles`,
+          `externallinks`
         ],
         loginData: {
           identifier: "sample@sample.com",

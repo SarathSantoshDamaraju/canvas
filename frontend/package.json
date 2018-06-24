@@ -11,6 +11,7 @@
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-source-filesystem": "^1.5.38",
     "gatsby-source-strapi": "0.0.3",
+    "jquery": "^3.3.1",
     "react-helmet": "^5.2.0"
   },
   "keywords": [

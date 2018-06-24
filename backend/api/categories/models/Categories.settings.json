@@ -9,12 +9,18 @@
     "timestamps": true
   },
   "attributes": {
-    "category": {
-      "collection": "files",
+    "name": {
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "featuredWith": {
+      "collection": "featuredfiles",
       "via": "category"
     },
-    "name": {
-      "type": "string"
+    "file": {
+      "collection": "files",
+      "via": "category"
     }
   }
 }

@@ -7,12 +7,14 @@ const LinkBuilder = props => {
   }
   if (props.media) {
     return (
-      <a href={props.link} title={props.title}><img src={props.media} alt=''></img>
+      <a href={props.link} title={props.title} target={props.target}>
+        <div className='card-media ma' style={{backgroundImage: `url(${props.media})`}}>
+         </div>
       </a>
     );
   }else {
     return (
-      <a href={props.link} title={props.title}>
+      <a href={props.link} title={props.title} target={props.target}> 
         {props.title}
       </a>
     );

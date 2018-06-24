@@ -1,12 +1,11 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import axios from "axios";
-import config from '../../config';
-import Label from './label';
-import Tags from './tags';
+import config from '../../../config';
+import Label from '../label';
+import Tags from '../tags';
 
 const FileDetails = ({data}) => {
-  console.log(data);
   return (
     <div className='row file'>
       <div className='col-md-6'>
@@ -25,7 +24,7 @@ const FileDetails = ({data}) => {
           </p>
           <p className='file-description mtb-1'>{data.description}</p>
           <Tags list={data.tags}/>
-          <a href={data.link} className='button button-black mtb-1' onClick={() => {updateDownloads(data.id, data.downloads)}}>Download</a>
+          <a href="javascript: void(0);" className='button button-black mtb-1' onClick={() => {updateDownloads(data.id, data.downloads)}}>Download</a>
         </div>
       </div>
     </div>
@@ -33,3 +32,22 @@ const FileDetails = ({data}) => {
 };
 
 export default FileDetails;
+
+function updateDownloads(id, totalDownloads) {
+    console.log(id, totalDownloads);
+    var data = {};
+    let incrementedDownloads = totalDownloads +  1;
+    var url = config.api+'/files/'+id;
+    data.downloads = incrementedDownloads;
+    console.log(data);
+    console.log(url);
+      axios.put(url, {
+        data
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
