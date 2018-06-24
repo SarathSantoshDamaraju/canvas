@@ -32,10 +32,10 @@ const Header = ({ siteTitle,data}) => {
     <nav className='row center-xs full-width' id='desktop-menu-container'>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12 for-desktop'>
         <ul className='nav-links full-height' data-alignment='vertical'>
-          <li className='nav-link '><LinkBuilder link='/' title="Home"/></li>
-          <li className='nav-link '><LinkBuilder link='/new' title="UI Kits"/></li>
-          <li className='nav-link '><LinkBuilder link={blogsLink} title="Articles"/></li>
-          <li className='nav-link '><LinkBuilder link={videosLink} title="Videos"/></li>
+          <li className='nav-link '><LinkBuilder link='/' title="Home" className="custom-underline"/></li>
+          <li className='nav-link '><LinkBuilder link='/new' title="UI Kits" className="custom-underline"/></li>
+          <li className='nav-link '><LinkBuilder link={blogsLink} title="Articles" className="custom-underline"/></li>
+          <li className='nav-link'><LinkBuilder link={videosLink} title="Videos" className="custom-underline"/></li>
         </ul>
       </div>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12'>
@@ -49,8 +49,8 @@ const Header = ({ siteTitle,data}) => {
       </div>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12 for-desktop'>
       <ul className='nav-links full-height' data-alignment='vertical'>
-          <li className='nav-link'><LinkBuilder link={uploadLink} title="Submit"/></li>
-          <li className='nav-link'><LinkBuilder link='/about' title="About"/></li>
+          <li className='nav-link'><LinkBuilder link={uploadLink} title="Submit" className="custom-underline"/></li>
+          <li className='nav-link'><LinkBuilder link='/about' title="About" className="custom-underline"/></li>
         </ul>
       </div>
     </nav>
@@ -63,7 +63,7 @@ const Header = ({ siteTitle,data}) => {
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={videosLink} title="Videos"/></li>
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={uploadLink} title="Submit"/></li>
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/about' title="About"/></li>
-          <li className='nav-link ' onClick={closeMobileMenu} className='color-red'><LinkBuilder link='/#' title="Close"/></li>
+          <li className='nav-link color-red' onClick={closeMobileMenu}><LinkBuilder link='/#' title="Close"/></li>
         </ul>
       </div>
     </nav>

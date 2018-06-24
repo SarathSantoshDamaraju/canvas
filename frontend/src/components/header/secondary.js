@@ -32,10 +32,10 @@ const Header = ({ siteTitle, data }) => {
     <nav className='row center-xs full-width' id='desktop-menu-container'>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12 for-desktop'>
         <ul className='nav-links full-height' data-alignment='vertical'>
-          <li className='nav-link '><LinkBuilder link='/' title="Home"/></li>
-          <li className='nav-link '><LinkBuilder link='/new' title="New"/></li>
-          <li className='nav-link '><LinkBuilder link='/popular' title="Popular"/></li>
-          <li className='nav-link '><LinkBuilder link='/all' title="All"/></li>
+          <li className='nav-link '><LinkBuilder link='/' title="Home" className="custom-underline"/></li>
+          <li className='nav-link '><LinkBuilder link='/new' title="New" className="custom-underline"/></li>
+          <li className='nav-link '><LinkBuilder link='/popular' title="Popular" className="custom-underline"/></li>
+          <li className='nav-link '><LinkBuilder link='/all' title="All" className="custom-underline"/></li>
         </ul>
       </div>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12'>
@@ -49,8 +49,8 @@ const Header = ({ siteTitle, data }) => {
       </div>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12 for-desktop'>
       <ul className='nav-links full-height' data-alignment='vertical'>
-          <li className='nav-link'><LinkBuilder link={uploadLink} title="Submit"/></li>
-          {/* <li className='nav-link'><LinkBuilder link='/about' title="About"/></li> */}
+          <li className='nav-link'><LinkBuilder link={uploadLink} title="Submit" className="custom-underline"/></li>
+          <li className='nav-link'><LinkBuilder link='/about' title="About" className="custom-underline"/></li>
         </ul>
       </div>
     </nav>

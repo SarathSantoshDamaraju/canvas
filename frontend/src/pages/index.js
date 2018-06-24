@@ -24,7 +24,7 @@ const IndexPage = ({data}) => {
       <div className='row'>
         <ul className="list-header mtb-1">
           <li className="list-header-item text-left color-primary"><h5>Featured Kits</h5></li>
-          <li className="list-header-item text-right color-primary"><LinkBuilder title="see all" link='/all' /></li>
+          <li className="list-header-item text-right color-primary"><LinkBuilder title="see all" link='/all' className="custom-underline"/></li>
         </ul>
       </div>
       <div className='row mtb-2'>
@@ -40,7 +40,7 @@ const IndexPage = ({data}) => {
       <div className='row'>
         <ul className="list-header mtb-1">
           <li className="list-header-item text-left color-primary"><h5>Featured Videos</h5></li>
-          <li className="list-header-item text-right color-primary"><LinkBuilder title="see all" link={videosLink} /></li>
+          <li className="list-header-item text-right color-primary"><LinkBuilder title="see all" link={videosLink} className="custom-underline"/></li>
         </ul>
       </div>
       <div className='row mtb-2'>
@@ -57,7 +57,7 @@ const IndexPage = ({data}) => {
       <div className='row'>
         <ul className="list-header mtb-1">
           <li className="list-header-item text-left color-primary"><h5>Featured Blogs</h5></li>
-          <li className="list-header-item text-right color-primary"><LinkBuilder title="see all" link={blogsLink} /></li>
+          <li className="list-header-item text-right color-primary"><LinkBuilder title="see all" link={blogsLink} className="custom-underline"/></li>
         </ul>
       </div>
       <div className='row mtb-2'>

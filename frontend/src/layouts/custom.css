@@ -58,19 +58,42 @@ nav {
   color: #333;
 }
 
-.nav-link a {
+.nav-link a, .list-header-item a{
   font-size: 1em;
   opacity: 0.6;
   transition: 0.3s;
 }
 
-.nav-link.active a {
+.nav-link.active a, .list-header-item a{
   opacity: 1;
 }
 
-.nav-link a:hover {
+.nav-link a:hover, .list-header-item a:hover {
   opacity: 1;
-  color: #DE102A;
+}
+
+.custom-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-link .custom-underline::after, .list-header-item .custom-underline::after {
+  top: 20px;
+  height: 2px;
+  width: 0%;
+  left: 5%;
+  background-color: #DE102A;
+    transition: 0.5s ease all .1s;
+}
+
+.nav-link:hover .custom-underline::after, .list-header-item:hover .custom-underline::after {
+  width: 60%;
+    transition: 0.3s ease all;
 }
 
 .brand {
@@ -127,9 +150,6 @@ nav {
   font-size: 2em;
 }
 
-.list-header-item a:hover {
-  text-decoration: underline;
-}
 
 /* ================== Cards Related */
 

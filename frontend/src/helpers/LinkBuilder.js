@@ -8,7 +8,7 @@ const LinkBuilder = props => {
   }
   if (props.media) {
     return (
-      <a href={props.link} title={props.title} target={props.target}>
+      <a href={props.link} title={props.title} target={props.target} className={props.className ? props.className : ''}>
         <div className='card-media ma' style={{backgroundImage: `url(${props.media})`}}>
          </div>
       </a>
@@ -16,7 +16,7 @@ const LinkBuilder = props => {
   }else {
     if(props.target==="_self"){
     return (
-      <a href={props.link} title={props.title} target={props.target}> 
+      <a href={props.link} title={props.title} target={props.target} className={props.className ? props.className : ''}> 
         {props.title}
       </a>
     )}
@@ -24,6 +24,7 @@ const LinkBuilder = props => {
       return (
         <OutboundLink
         href={props.link}
+        className={props.className ? props.className : ''}
       >
         {props.title}
       </OutboundLink>  
