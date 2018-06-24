@@ -34,15 +34,10 @@ const FileDetails = ({data}) => {
 export default FileDetails;
 
 function updateDownloads(id, totalDownloads) {
-    console.log(id, totalDownloads);
-    var data = {};
-    let incrementedDownloads = totalDownloads +  1;
+    let updatedCount = totalDownloads +  1;
     var url = config.api+'/files/'+id;
-    data.downloads = incrementedDownloads;
-    console.log(data);
-    console.log(url);
       axios.put(url, {
-        data
+        downloads:updatedCount
       })
       .then(function (response) {
         console.log(response);

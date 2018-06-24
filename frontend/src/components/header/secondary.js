@@ -50,7 +50,7 @@ const Header = ({ siteTitle, data }) => {
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12 for-desktop'>
       <ul className='nav-links full-height' data-alignment='vertical'>
           <li className='nav-link'><LinkBuilder link={uploadLink} title="Submit"/></li>
-          <li className='nav-link'><LinkBuilder link='/about' title="About"/></li>
+          {/* <li className='nav-link'><LinkBuilder link='/about' title="About"/></li> */}
         </ul>
       </div>
     </nav>
@@ -62,7 +62,7 @@ const Header = ({ siteTitle, data }) => {
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/popular' title="Popular"/></li>
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/all' title="All"/></li>
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={uploadLink} title="Submit"/></li>
-          <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/about' title="About"/></li>
+          {/* <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/about' title="About"/></li> */}
           <li className='nav-link ' onClick={closeMobileMenu} className='color-red'><LinkBuilder link='/#' title="Close"/></li>
         </ul>
       </div>

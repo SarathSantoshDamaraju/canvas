@@ -70,6 +70,7 @@ nav {
 
 .nav-link a:hover {
   opacity: 1;
+  color: #DE102A;
 }
 
 .brand {

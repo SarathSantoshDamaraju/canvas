@@ -8,16 +8,12 @@ const IndexPage = ({data}) => {
   let videosLink;
   let blogsLink;
   data.allStrapiExternallinks.edges.map(document => {
-    switch(document.node.name){
+    switch(document.node.name.toLowerCase()){
       case "video":
         videosLink = document.node.link;
       break;
       case "blog":
         blogsLink = document.node.link;
-      break;
-      default:
-        blogsLink = '/all';
-        videosLink = '/all';
       break;
     }
   })

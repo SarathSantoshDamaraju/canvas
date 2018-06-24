@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const LinkBuilder = props => {
   if (!props.link) return null;
@@ -13,11 +14,21 @@ const LinkBuilder = props => {
       </a>
     );
   }else {
+    if(props.target==="_self"){
     return (
       <a href={props.link} title={props.title} target={props.target}> 
         {props.title}
       </a>
-    );
+    )}
+    else {
+      return (
+        <OutboundLink
+        href={props.link}
+      >
+        {props.title}
+      </OutboundLink>  
+      )
+    }
   }
 };
 
