@@ -11,18 +11,18 @@ import './theme.css'
 import './custom.css'
 import './responsive.css'
 import './flexbox.css'
+import favicon from '../images/favicon.png'
 
 const Layout = ({ children, data, location }) => (
   <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
+     <Helmet>
+        <meta charSet="utf-8" />
+        <title>{data.site.siteMetadata.title}</title>
+        <meta name="Abstrakt" content="A collective designs repo" />
+        <link rel="icon" type="image/png" sizes="16x16" href={favicon}/>
+    </Helmet>
     {location.pathname === '/' ? 
-    <Header siteTitle={data.site.siteMetadata.title} data={data.allStrapiExternallinks}/> :
+      <Header siteTitle={data.site.siteMetadata.title} data={data.allStrapiExternallinks}/> :
       <SecondaryHeader siteTitle={data.site.siteMetadata.title} data={data.allStrapiExternallinks}/>
     }
     <div className='container' id='app'>

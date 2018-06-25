@@ -3,7 +3,7 @@ const config = require(`./config`);
 
 module.exports = {  
   siteMetadata: {
-    title: `Sketch Repo`,
+    title: `Abstrakt`,
   },
   pathPrefix: `../`,
   plugins: [
@@ -39,5 +39,17 @@ module.exports = {
         exclude: ["/preview/**", "/do-not-track/me/too/"],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "GatsbyJS",
+        short_name: "GatsbyJS",
+        start_url: "/",
+        background_color: "#f7f0eb",
+        theme_color: "#a2466c",
+        display: "minimal-ui",
+        icon: "src/images/logo.jpeg", // This path is relative to the root of the site.
+      },
+    }
   ],
 }
