@@ -39,7 +39,7 @@ const Label = ({data}) => {
       break;
   }
   if(data.isLink){
-      return(<Link to={data.linkUrl} className={labelClass}><span className={iconClass}></span>{data.category}</Link>)
+      return(<a href={data.linkUrl} className={labelClass}><span className={iconClass}></span>{data.category}</a>)
   }
   else {
       return(<span className={labelClass}>{data.category}</span>)

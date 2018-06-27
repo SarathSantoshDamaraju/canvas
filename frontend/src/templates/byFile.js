@@ -26,7 +26,6 @@ export const query = graphql`
       downloads
       tags
       link
-      designer_email
       designer_portfolio
       designer
       thumbnail {

@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import SecondaryHeader from '../components/header/secondary'
 import Footer from '../components/footer'
-import Link from 'gatsby-link';
+import Link from 'gatsby-link'
 import './reset.css'
 import './global.css'
 import './theme.css'
@@ -12,6 +12,8 @@ import './custom.css'
 import './responsive.css'
 import './flexbox.css'
 import favicon from '../images/favicon.png'
+
+const windowGlobal = typeof window !== 'undefined' && window.location.origin
 
 const Layout = ({ children, data, location }) => (
   <div>
@@ -21,6 +23,7 @@ const Layout = ({ children, data, location }) => (
         <meta name="Abstrakt" content="A collective designs repo" />
         <link rel="icon" type="image/png" sizes="16x16" href={favicon}/>
     </Helmet>
+    <base href={windowGlobal}/>
     {location.pathname === '/' ? 
       <Header siteTitle={data.site.siteMetadata.title} data={data.allStrapiExternallinks}/> :
       <SecondaryHeader siteTitle={data.site.siteMetadata.title} data={data.allStrapiExternallinks}/>

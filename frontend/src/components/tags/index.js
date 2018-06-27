@@ -7,7 +7,7 @@ const Tags = ({list}) => {
     var tagLinks=[];
     list.forEach(element => {
         var tag = element.trim();
-        tagLinks.push(<li key={tag} className="tag-item"><Link className="badge badge-pill badge-dark" to={'tag/'+tag}><i>{tag}</i></Link></li>);
+        tagLinks.push(<li key={tag} className="tag-item"><a className="badge badge-pill badge-dark" href={'tag/'+tag}><i>{tag}</i></a></li>);
     });
     return(<ul className="tags mtb-1">{tagLinks}</ul>)
 }

@@ -5,7 +5,6 @@ module.exports = {
   siteMetadata: {
     title: `Abstrakt`,
   },
-  pathPrefix: `../`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -20,8 +19,8 @@ module.exports = {
           `externallinks`
         ],
         loginData: {
-          identifier: "sample@sample.com",
-          password: "allowme",
+          identifier: "",
+          password: "",
         }
       },
     },
