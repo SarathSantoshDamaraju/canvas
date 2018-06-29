@@ -9,10 +9,10 @@ const Footer = ({data}) => (
               <div className="row start-xs">
                   <div className="col-xs">
                     <ul className="row">
-                    <li><a href="https://twitter.com/helloabstrakt" target="blank"><i className="fab fa-twitter color-primary"></i></a></li>
-                    <li><a href="https://www.facebook.com/helloabstrakt" target="blank"><i className="fab fa-facebook-f color-primary"></i></a></li>
-                    <li><a href="https://www.instagram.com/helloabstrakt/" target="blank"><i className="fab fa-instagram color-primary"></i></a></li>                    
-                    <li><a href="https://medium.com/helloabstrakt" target="blank"><i className="fab fa-medium-m color-primary"></i></a></li>
+                    <li><a href="https://twitter.com/helloabstrakt" target="blank"><i className="fab fa-twitter color-white"></i></a></li>
+                    <li><a href="https://www.facebook.com/helloabstrakt" target="blank"><i className="fab fa-facebook-f color-white"></i></a></li>
+                    <li><a href="https://www.instagram.com/helloabstrakt/" target="blank"><i className="fab fa-instagram color-white"></i></a></li>                    
+                    <li><a href="https://medium.com/helloabstrakt" target="blank"><i className="fab fa-medium-m color-white"></i></a></li>
                     </ul>
                   </div>
               </div>

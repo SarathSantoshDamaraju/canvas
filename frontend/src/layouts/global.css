@@ -73,6 +73,10 @@ img {
   color: #c62828;
 }
 
+.color-white {
+  color:  #fff;
+}
+
 /* ================== Margins and Paddings */
 
 .ma{
@@ -147,4 +151,12 @@ img {
 .button-black {
     background: rgb(34, 34, 34);
     color: rgb(255, 255, 255);
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
 }

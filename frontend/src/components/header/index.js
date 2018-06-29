@@ -31,7 +31,7 @@ const Header = ({ siteTitle,data}) => {
   <header>
     <nav className='row center-xs full-width' id='desktop-menu-container'>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12 for-desktop'>
-        <ul className='nav-links full-height' data-alignment='vertical'>
+        <ul className='nav-links full-height float-left' data-alignment='vertical'>
           <li className='nav-link '><LinkBuilder link='/' title="Home" className="custom-underline"/></li>
           <li className='nav-link '><LinkBuilder link='/new' title="UI Kits" className="custom-underline"/></li>
           <li className='nav-link '><LinkBuilder link={blogsLink} title="Articles" className="custom-underline"/></li>
@@ -48,9 +48,9 @@ const Header = ({ siteTitle,data}) => {
         </div>
       </div>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12 for-desktop'>
-      <ul className='nav-links full-height' data-alignment='vertical'>
-          <li className='nav-link'><LinkBuilder link={uploadLink} title="Submit" className="custom-underline"/></li>
-          <li className='nav-link'><LinkBuilder link='/about' title="About" className="custom-underline"/></li>
+      <ul className='nav-links full-height float-right' data-alignment='vertical'>
+          <li className='nav-link'><LinkBuilder link={uploadLink} title="Submit" className="border"/></li>
+          {/* <li className='nav-link'><LinkBuilder link='/about' title="About" className="custom-underline"/></li> */}
         </ul>
       </div>
     </nav>

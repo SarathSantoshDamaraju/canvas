@@ -5,7 +5,6 @@
   "author": "Krishna Sarath <sarathdamaraju@hotmail.com>",
   "dependencies": {
     "axios": "^0.18.0",
-    "dotenv": "^6.0.0",
     "fs": "0.0.1-security",
     "gatsby": "^1.9.247",
     "gatsby-image": "^1.0.52",

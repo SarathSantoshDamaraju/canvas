@@ -4,9 +4,6 @@ import Card from '../components/card';
 import LinkBuilder from '../helpers/LinkBuilder';
 import SubscriptionForm from '../components/forms/subscription.js';
 
-require('dotenv').load();
-
-
 const IndexPage = ({data}) => {
   console.log('No value for FOO yet:', process.env.FOO);
   let videosLink;

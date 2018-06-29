@@ -1,4 +1,4 @@
 module.exports = {
-    api : "",
+    api : "http://localhost:8080",
     fileSubmit: '#'
 }
