@@ -30,8 +30,8 @@ const Label = ({data}) => {
       labelClass += 'color-mobile';
       break;
     case 'uikits':
-      iconClass += 'bgcolor-ui-kits';
-      labelClass += 'color-ui-kits';
+      iconClass += 'bgcolor-uikits';
+      labelClass += 'color-uikits';
       break;
     case 'desktop':
       iconClass += 'bgcolor-desktop';
