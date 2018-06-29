@@ -34,7 +34,7 @@ const Header = ({ siteTitle, data }) => {
         <ul className='nav-links full-height float-left' data-alignment='vertical'>
           <li className='nav-link '><LinkBuilder link='/' title="Home" className="custom-underline"/></li>
           <li className='nav-link '><LinkBuilder link='/new' title="New" className="custom-underline"/></li>
-          <li className='nav-link '><LinkBuilder link='/popular' title="Popular" className="custom-underline"/></li>
+          {/* <li className='nav-link '><LinkBuilder link='/popular' title="Popular" className="custom-underline"/></li> */}
           <li className='nav-link '><LinkBuilder link='/all' title="All" className="custom-underline"/></li>
         </ul>
       </div>
@@ -59,7 +59,7 @@ const Header = ({ siteTitle, data }) => {
         <ul className='text-center nav-links' data-alignment='horizontal'>
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/' title="Home"/></li>
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/new' title="New"/></li>
-          <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/popular' title="Popular"/></li>
+          {/* <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/popular' title="Popular"/></li> */}
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/all' title="All"/></li>
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={uploadLink} title="Submit"/></li>
           {/* <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/about' title="About"/></li> */}

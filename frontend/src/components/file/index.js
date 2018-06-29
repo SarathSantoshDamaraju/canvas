@@ -23,7 +23,7 @@ const FileDetails = ({data}) => {
           </p>
           <p className='file-description mtb-1'>{data.description}</p>
           <Tags list={data.tags}/>
-          <a href="javascript: void(0);" className='button button-black mtb-1' onClick={() => {updateDownloads(data.id, data.downloads)}}>Download</a>
+          <a href={data.link} className='button button-black mtb-1'>Download</a>
         </div>
       </div>
     </div>
