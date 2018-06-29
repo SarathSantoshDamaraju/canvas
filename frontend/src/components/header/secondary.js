@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import logo from '../../images/logo.jpeg';
+import logo from '../../images/logo.png';
 import config from '../../../config';
 import LinkBuilder from '../../helpers/LinkBuilder';
 
@@ -40,7 +40,9 @@ const Header = ({ siteTitle, data }) => {
       </div>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12'>
         <div className='brand full-height'>
-          <img src={logo} className='logo center-center'/>
+          <a href="/">
+            <img src={logo} className='logo center-center'/>
+          </a>
           {/* <h1 className='name'><a href="#">Designer Depot</a></h1> */}
           <a href="javascript:void(0);" className="for-mobile center-right burger-menu" onClick={toggleMenu}>
             <span className='fa fa-bars'></span>

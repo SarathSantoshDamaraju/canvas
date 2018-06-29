@@ -106,7 +106,7 @@ nav {
 }
 
 .brand .logo {
-  max-height: 80px;
+  max-height: 70px;
   line-height: 2em;
   font-size: 1.5em;
 }
@@ -129,7 +129,7 @@ nav {
 
 .burger-menu {
   float: right;
-  line-height: 6.3em;
+  line-height: 4em;
   font-size: 1.5em;
   margin-right: 25px;
 }
@@ -204,6 +204,7 @@ nav {
 
 .file-thumbnail {
   width: 100%;
+  border-radius: 4px;
 }
 
 .file-details {
@@ -333,6 +334,12 @@ footer ul li {
   background-color: #777;
   cursor: pointer;
 }
+
+.button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0
+}
+
 #mc_embed_signup div#mce-responses {
   float: left;
   top: -1.4em;

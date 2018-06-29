@@ -13,10 +13,6 @@ a {
   color: inherit;
 }
 
-img {
-    border-radius: 4px;
-}
-
 /* ================== Displays Related */
 
 .block {
@@ -70,11 +66,11 @@ img {
 /* ================== Text Colors */
 
 .color-red {
-  color: #c62828;
+  color: #c62828 !important;
 }
 
 .color-white {
-  color:  #fff;
+  color:  #fff !important;
 }
 
 /* ================== Margins and Paddings */
