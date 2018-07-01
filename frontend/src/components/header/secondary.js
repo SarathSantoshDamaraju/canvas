@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import logo from '../../images/logo.png';
 import config from '../../../config';
 import LinkBuilder from '../../helpers/LinkBuilder';
+import SubscriptionForm from '../forms/subscription.js';
 
 const Header = ({ siteTitle, data }) => {
     let videosLink;

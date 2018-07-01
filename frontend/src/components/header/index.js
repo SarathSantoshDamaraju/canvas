@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import logo from '../../images/logo.png';
 import config from '../../../config';
 import LinkBuilder from '../../helpers/LinkBuilder';
+import SubscriptionForm from '../forms/subscription.js';
+
 
 const Header = ({ siteTitle,data}) => {
   let videosLink;
@@ -24,20 +25,14 @@ const Header = ({ siteTitle,data}) => {
 
   return(
   <header>
-    <nav className='row center-xs full-width' id='desktop-menu-container'>
+    <nav className='row center-xs full-width bg-grey' id='desktop-menu-container'>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12 for-desktop'>
         <ul className='nav-links full-height float-left' data-alignment='vertical'>
-          <li className='nav-link '><LinkBuilder link='/' title="Home" className="custom-underline"/></li>
-          <li className='nav-link '><LinkBuilder link='/new' title="UI Kits" className="custom-underline"/></li>
-          <li className='nav-link '><LinkBuilder link={blogsLink} title="Articles" className="custom-underline"/></li>
-          <li className='nav-link'><LinkBuilder link={videosLink} title="Videos" className="custom-underline"/></li>
         </ul>
       </div>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12'>
         <div className='brand full-height'>
-          <a href="/">
-            <img src={logo} className='logo center-center'/>
-          </a>
+          {/* <a href="/"><img src={logo} className='logo center-center'/></a> */}
           {/* <h1 className='name'><a href="#">Designer Depot</a></h1> */}
           <a href="javascript:void(0);" className="for-mobile center-right burger-menu" onClick={toggleMenu}>
             <span className='fa fa-bars'></span>
@@ -46,7 +41,11 @@ const Header = ({ siteTitle,data}) => {
       </div>
       <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12 for-desktop'>
       <ul className='nav-links full-height float-right' data-alignment='vertical'>
-          <li className='nav-link'><LinkBuilder link={uploadLink} title="Submit" className="border"/></li>
+          <li className='nav-link color-white '><LinkBuilder link='/' title="Home" className="custom-underline"/></li>
+          <li className='nav-link color-white '><LinkBuilder link='/new' title="UI Kits" className="custom-underline"/></li>
+          <li className='nav-link color-white '><LinkBuilder link={blogsLink} title="Articles" className="custom-underline"/></li>
+          <li className='nav-link color-white'><LinkBuilder link={videosLink} title="Videos" className="custom-underline"/></li>
+          <li className='nav-link color-white'><LinkBuilder link={uploadLink} title="Submit" className="border"/></li>
           {/* <li className='nav-link'><LinkBuilder link='/about' title="About" className="custom-underline"/></li> */}
         </ul>
       </div>
@@ -64,6 +63,7 @@ const Header = ({ siteTitle,data}) => {
         </ul>
       </div>
     </nav>
+    <SubscriptionForm />
  </header>
 )};
 

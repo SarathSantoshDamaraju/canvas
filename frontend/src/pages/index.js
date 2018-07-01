@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Card from '../components/card';
 import LinkBuilder from '../helpers/LinkBuilder';
-import SubscriptionForm from '../components/forms/subscription.js';
 
 const IndexPage = ({data}) => {
   console.log('No value for FOO yet:', process.env.FOO);
@@ -20,7 +19,6 @@ const IndexPage = ({data}) => {
   })
   return(
   <div>
-    <SubscriptionForm />
     <div className="featured-list plr-20 mtb-90">
       <div className='row'>
         <ul className="list-header mtb-1">

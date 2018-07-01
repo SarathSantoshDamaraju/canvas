@@ -4,7 +4,6 @@ import config from '../../config';
 import FileDetails from '../components/file';
 
 const ArticleTemplate = ({ data }) => {
-  console.log(data);
   return(
   <div>
       <FileDetails data={data.strapiFiles} />

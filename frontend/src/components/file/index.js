@@ -6,7 +6,7 @@ import Tags from '../tags';
 
 const FileDetails = ({data}) => {
   return (
-    <div className='row file'>
+    <div className='row file mt-11'>
       <div className='col-md-6'>
         <img
           src={config.api + data.thumbnail.url}

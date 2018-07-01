@@ -4,7 +4,7 @@ import Card from '../components/card';
 import Label from '../components/label';
 
 const ArticleTemplate = ({ data }) => (
-  <div className='row'>
+  <div className='row mt-6'>
   {data.allStrapiFiles.edges.map(document => (
       <Card data={document} key={document.node.id}/>
   ))}

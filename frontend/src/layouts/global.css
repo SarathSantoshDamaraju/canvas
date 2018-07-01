@@ -13,6 +13,10 @@ a {
   color: inherit;
 }
 
+p {
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
 /* ================== Displays Related */
 
 .block {
@@ -73,6 +77,10 @@ a {
   color:  #fff !important;
 }
 
+.bg-grey {
+  background-color: #333 !important;
+}
+
 /* ================== Margins and Paddings */
 
 .ma{
@@ -91,6 +99,10 @@ a {
 
 .mt-11 {
   margin-top: 11rem;
+}
+
+.mt-6 {
+  margin-top: 6em;
 }
 
 .mt-90 {

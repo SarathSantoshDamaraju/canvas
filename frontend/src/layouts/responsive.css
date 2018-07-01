@@ -92,7 +92,7 @@
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 310px) {
   #app,
   header {
     display: none;
