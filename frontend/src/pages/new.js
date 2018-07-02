@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import Card from '../components/card'
 
 const NewFiles = ({data}) => (
-  <div className='row mt-6'>
+  <div className='row mt-11'>
     {data.allStrapiFiles.edges.map(document => {
       // Show Category label only in the home page and file pages.
       document.node.showLabel=true;

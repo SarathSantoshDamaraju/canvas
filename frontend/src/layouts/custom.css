@@ -144,6 +144,16 @@ nav {
   border-style: solid;
 }
 
+.left-logo {
+  margin: auto;
+  float: left;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
+}
 /* ================== Landing Page Related */
 
 .featured-list .list-header {
@@ -268,11 +278,11 @@ nav {
 /* ================== Footer Related */
 
 footer {
-  position: fixed;
-  bottom: 0;
   width: stretch;
   background-color: #333;
   color: #fff;
+  position: relative;
+  display: inline-block;
 }
 
 footer ul li {

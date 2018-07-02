@@ -13,7 +13,7 @@ const subscriptionForm = () => (
             <div id="mc_embed_signup_scroll">
                 <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="email address" required />
                 <div style={{position: 'absolute', left: -5000+'px'}} data-aria-hidden="true"><input type="text" name="b_36bd9170382ff893f35cd33c7_caf93a90fc" tabIndex="-1" value="" /></div>
-                <input type="submit" value="+" name="subscribe" id="mc-embedded-subscribe" className="button button-black" />
+                <button type="submit" name="subscribe" id="mc-embedded-subscribe" className="button button-black"><i className="fa fa-check color-white"></i></button>
                 <p className="info-label">Subscribe for our weekly newsletter for interesting updates!</p>
             </div>
         </form>

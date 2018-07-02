@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import config from '../../../config';
 import LinkBuilder from '../../helpers/LinkBuilder';
 import SubscriptionForm from '../forms/subscription.js';
-
+import logo from '../../images/logo.png';
 
 const Header = ({ siteTitle,data}) => {
   let videosLink;
@@ -21,20 +21,31 @@ const Header = ({ siteTitle,data}) => {
         uploadLink = document.node.link;
       break;
     }
-  })
+  });
+
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > 126) {
+      document.getElementsByClassName("hidden")[0].style.display = "block";
+    } else {
+      document.getElementsByClassName("hidden")[0].style.display = "none";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+  
 
   return(
   <header>
     <nav className='row center-xs full-width bg-grey' id='desktop-menu-container'>
-      <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12 for-desktop'>
-        <ul className='nav-links full-height float-left' data-alignment='vertical'>
-        </ul>
+      <div className='col-md-6 col-lg-6 col-sm-12 col-xs-12 for-desktop'>
+      <a href="/"><img src={logo} className='logo hidden left-logo'/></a>
       </div>
-      <div className='col-md-4 col-lg-4 col-sm-12 col-xs-12'>
+      <div className='col-md-12 col-lg-12 col-sm-12 col-xs-12 for-mobile'>
         <div className='brand full-height'>
-          {/* <a href="/"><img src={logo} className='logo center-center'/></a> */}
+          <a href="/"><img src={logo} className='logo center-center'/></a>
           {/* <h1 className='name'><a href="#">Designer Depot</a></h1> */}
-          <a href="javascript:void(0);" className="for-mobile center-right burger-menu" onClick={toggleMenu}>
+          <a href="javascript:void(0);" className="for-mobile center-right burger-menu color-white" onClick={toggleMenu}>
             <span className='fa fa-bars'></span>
           </a>
         </div>
@@ -58,7 +69,7 @@ const Header = ({ siteTitle,data}) => {
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={blogsLink} title="Articles"/></li>
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={videosLink} title="Videos"/></li>
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={uploadLink} title="Submit"/></li>
-          <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/about' title="About"/></li>
+          {/* <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/about' title="About"/></li> */}
           <li className='nav-link color-red' onClick={closeMobileMenu}><LinkBuilder link='/#' title="Close"/></li>
         </ul>
       </div>
