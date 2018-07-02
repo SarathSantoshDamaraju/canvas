@@ -5,24 +5,34 @@ import LinkBuilder from '../../helpers/LinkBuilder';
 import SubscriptionForm from '../forms/subscription.js';
 import logo from '../../images/logo.png';
 
-const Header = ({ siteTitle,data}) => {
-  let videosLink;
-  let blogsLink;
-  let uploadLink;
-  data.edges.map(document => {
+
+class Header extends React.Component {
+  constructor(props) {
+     super(props);
+     this.state={
+       videosLink:'',
+       blogsLink:'',
+       uploadLink:''
+     }
+  }
+
+  componentDidMount() {
+  window.addEventListener('scroll', this.handleScroll);
+  debugger;
+  this.props.data.edges.map(document => {
     switch(document.node.name){
       case "video":
-        videosLink = document.node.link;
+        this.setState({videosLink:document.node.link});
       break;
       case "blog":
-        blogsLink = document.node.link;
+      this.setState({blogsLink:document.node.link});
       break;
       case "upload":
-        uploadLink = document.node.link;
+      this.setState({uploadLink:document.node.link});
       break;
     }
   });
-
+  
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
@@ -34,7 +44,8 @@ const Header = ({ siteTitle,data}) => {
     prevScrollpos = currentScrollPos;
   }
   
-
+  }
+  render(){
   return(
   <header>
     <nav className='row center-xs full-width bg-grey' id='desktop-menu-container'>
@@ -54,9 +65,9 @@ const Header = ({ siteTitle,data}) => {
       <ul className='nav-links full-height float-right' data-alignment='vertical'>
           <li className='nav-link color-white '><LinkBuilder link='/' title="Home" className="custom-underline"/></li>
           <li className='nav-link color-white '><LinkBuilder link='/new' title="UI Kits" className="custom-underline"/></li>
-          <li className='nav-link color-white '><LinkBuilder link={blogsLink} title="Articles" className="custom-underline"/></li>
-          <li className='nav-link color-white'><LinkBuilder link={videosLink} title="Videos" className="custom-underline"/></li>
-          <li className='nav-link color-white'><LinkBuilder link={uploadLink} title="Submit" className="border"/></li>
+          <li className='nav-link color-white '><LinkBuilder link={this.state.blogsLink} title="Articles" className="custom-underline"/></li>
+          <li className='nav-link color-white'><LinkBuilder link={this.state.videosLink} title="Videos" className="custom-underline"/></li>
+          <li className='nav-link color-white'><LinkBuilder link={this.state.uploadLink} title="Submit" className="border"/></li>
           {/* <li className='nav-link'><LinkBuilder link='/about' title="About" className="custom-underline"/></li> */}
         </ul>
       </div>
@@ -66,9 +77,9 @@ const Header = ({ siteTitle,data}) => {
         <ul className='text-center nav-links' data-alignment='horizontal'>
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/' title="Home"/></li>
           <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/new' title="UI Kits"/></li>
-          <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={blogsLink} title="Articles"/></li>
-          <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={videosLink} title="Videos"/></li>
-          <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={uploadLink} title="Submit"/></li>
+          <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={this.state.blogsLink} title="Articles"/></li>
+          <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={this.state.videosLink} title="Videos"/></li>
+          <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link={this.state.uploadLink} title="Submit"/></li>
           {/* <li className='nav-link ' onClick={closeMobileMenu}><LinkBuilder link='/about' title="About"/></li> */}
           <li className='nav-link color-red' onClick={closeMobileMenu}><LinkBuilder link='/#' title="Close"/></li>
         </ul>
@@ -76,7 +87,8 @@ const Header = ({ siteTitle,data}) => {
     </nav>
     <SubscriptionForm />
  </header>
-)};
+)}
+};
 
 function toggleMenu(){
   var mobileMenu = document.getElementById('mobile-menu-container');

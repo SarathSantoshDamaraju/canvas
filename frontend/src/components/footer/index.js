@@ -6,7 +6,7 @@ const Footer = ({data}) => (
       <div className='container'>
         <div className='row center-xs col-xs'>
           <div className="box">
-              <div className="row start-xs" style={{"margin-top": "6px"}}>
+              <div className="row start-xs" style={{"marginTop": "6px"}}>
                   <div className="col-xs">
                     <ul className="row">
                     <li><a href="https://twitter.com/helloabstrakt" target="blank"><i className="fab fa-twitter color-white"></i></a></li>
