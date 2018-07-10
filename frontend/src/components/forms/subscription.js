@@ -5,7 +5,7 @@ const subscriptionForm = () => (
     <div className="row mt-6">
         <div id="mc_embed_signup">
         <div className="container plr-20">
-          <a href="/">
+          <a href="/" className="for-desktop">
             <img src={logo} className='logo'/>
           </a>
           <p className="mtb-1 color-white">Abstrakt is an initiative started by a group of designers to help follow designers and form a community at large. We also focus on creating futuristic digital interfaces and awesome products. Drop a message and we'll meet for coffee :)</p>

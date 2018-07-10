@@ -18,7 +18,6 @@ class Header extends React.Component {
 
   componentDidMount() {
   window.addEventListener('scroll', this.handleScroll);
-  debugger;
   this.props.data.edges.map(document => {
     switch(document.node.name){
       case "video":

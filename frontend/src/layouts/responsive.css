@@ -18,6 +18,10 @@
     display: inline;
   }
 
+  .for-desktop {
+    display: none;
+  }
+
   .card {
     height: 600px;
   }

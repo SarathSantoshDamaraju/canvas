@@ -133,6 +133,10 @@ p {
   display: none;
 }
 
+.for-desktop {
+  display: block
+}
+
 .button {
     border-width: 2px;
     border-style: solid;

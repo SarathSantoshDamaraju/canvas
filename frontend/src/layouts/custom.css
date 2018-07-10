@@ -5,6 +5,7 @@
 #app {
   padding: 5px;
   margin-bottom: 50px;
+  min-height: 684px;
 }
 /* */
 
@@ -282,7 +283,7 @@ footer {
   background-color: #333;
   color: #fff;
   position: relative;
-  display: inline-block;
+  height: 60px;
 }
 
 footer ul li {
